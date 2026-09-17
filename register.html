@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Register - Supply Hub</title>
+    <link rel="stylesheet" href="index.css">
+</head>
+<body class="form-page">
+    <div class="form-container">
+        <a class="form-brand" href="index.html" aria-label="Supply Hub home">
+            <span class="brand-mark" aria-hidden="true"><svg viewBox="0 0 24 24" focusable="false"><path d="m12 3 8 4.5v9L12 21l-8-4.5v-9L12 3Z"/><path d="m4.5 7.5 7.5 4 7.5-4M12 12v9"/></svg></span>
+            <span>Supply<span class="brand-accent">Hub</span></span>
+        </a>
+        <p class="form-kicker">Get started</p>
+        <h2>Create your account</h2>
+        <p class="form-description">
+            Choose your role and bring your supply workflow into one place.
+        </p>
+        <form class="auth-form">
+            <div class="field-group">
+                <label for="register-name">Full name</label>
+                <input id="register-name" type="text" name="fullName" placeholder="e.g. Jackson waswa" autocomplete="name" required>
+            </div>
+            <div class="field-group">
+                <label for="register-email">Email address</label>
+                <input id="register-email" type="email" name="email" placeholder="you@example.com" autocomplete="email" required>
+            </div>
+            <div class="field-group">
+                <label for="register-phone">Phone number</label>
+                <input id="register-phone" type="tel" name="phone" placeholder="07XX XXX XXX" autocomplete="tel" required>
+                <small class="field-help">Use this same number when paying the registration fee.</small>
+            </div>
+            <div class="field-group">
+                <label for="account-type">Your role</label>
+                <select id="account-type" name="account-type" required>
+                    <option value="">Choose your role</option>
+                <option value="supplier">Supplier</option>
+                <option value="wholesaler">Wholesaler</option>
+                <option value="retailer">Retailer</option>
+                <option value="rider">Rider</option>
+                </select>
+                <small id="roleHelp" class="field-help">Select a role to see the registration fee.</small>
+            </div>
+            <div class="field-group">
+                <label for="register-password">Password</label>
+                <div class="password-field">
+                    <input id="register-password" type="password" name="password" placeholder="At least 6 characters" autocomplete="new-password" required>
+                    <button class="password-toggle" type="button" aria-label="Show password" data-password-toggle="register-password">
+                        <svg class="eye-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M2.5 12s3.5-6 9.5-6 9.5 6 9.5 6-3.5 6-9.5 6-9.5-6-9.5-6Z"/><circle cx="12" cy="12" r="2.5"/></svg>
+                    </button>
+                </div>
+            </div>
+            <div class="field-group">
+                <label for="register-confirm-password">Confirm password</label>
+                <div class="password-field">
+                    <input id="register-confirm-password" type="password" name="confirmPassword" placeholder="Repeat your password" autocomplete="new-password" required>
+                    <button class="password-toggle" type="button" aria-label="Show password" data-password-toggle="register-confirm-password">
+                        <svg class="eye-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M2.5 12s3.5-6 9.5-6 9.5 6 9.5 6-3.5 6-9.5 6-9.5-6-9.5-6Z"/><circle cx="12" cy="12" r="2.5"/></svg>
+                    </button>
+                </div>
+            </div>
+            <div class="payment-note-box" aria-live="polite">
+                <strong>Registration payment</strong>
+                <p>Pay <b id="registrationFee">the applicable fee</b> to M-Pesa <b>0796991921</b> using the phone number above.</p>
+            </div>
+            <div class="payment-confirmation">
+                <span aria-hidden="true">✓</span>
+                <small>Payment is matched to your account using your registered phone number.</small>
+            </div>
+            <label class="terms-check">
+                <input type="checkbox" required>
+                <span>I agree to the Supply Hub terms and privacy policy.</span>
+            </label>
+            <div class="register-actions">
+                <button type="submit" class="register-btn register-btn-primary">Create account</button>
+            </div>
+            <small class="form-footnote">Your password must be at least 6 characters long.</small>
+        </form>
+        <p class="bottom-text">
+            Already have an account? <a href="login.html">Sign in</a>
+        </p>
+        <a class="form-home-link" href="index.html">← Back to home</a>
+        <p id="registerMessage" class="form-message" aria-live="polite"></p>
+    </div>
+
+    <script src="index.js"></script>
+</body>
+</html>

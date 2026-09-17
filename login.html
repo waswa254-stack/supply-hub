@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login - Supply Hub</title>
+    <link rel="stylesheet" href="index.css">
+</head>
+<body class="form-page">
+    <div class="form-container">
+        <a class="form-brand" href="index.html" aria-label="Supply Hub home">
+            <span class="brand-mark" aria-hidden="true"><svg viewBox="0 0 24 24" focusable="false"><path d="m12 3 8 4.5v9L12 21l-8-4.5v-9L12 3Z"/><path d="m4.5 7.5 7.5 4 7.5-4M12 12v9"/></svg></span>
+            <span>Supply<span class="brand-accent">Hub</span></span>
+        </a>
+        <p class="form-kicker">Welcome back</p>
+        <h2>Sign in to your account</h2>
+        <p class="form-description">
+            Manage products, orders, and deliveries from one place.
+        </p>
+
+        <form class="auth-form" data-login-form="server" method="post" action="auth/login.php">
+            <div class="field-group">
+                <label for="login-email">Email address</label>
+                <input id="login-email" type="email" name="email" placeholder="you@example.com" autocomplete="email" required>
+            </div>
+            <div class="field-group">
+                <div class="field-label-row">
+                    <label for="login-password">Password</label>
+                </div>
+                <div class="password-field">
+                    <input id="login-password" type="password" name="password" placeholder="Enter your password" autocomplete="current-password" required>
+                    <button class="password-toggle" type="button" aria-label="Show password" data-password-toggle="login-password">
+                        <svg class="eye-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M2.5 12s3.5-6 9.5-6 9.5 6 9.5 6-3.5 6-9.5 6-9.5-6-9.5-6Z"/><circle cx="12" cy="12" r="2.5"/></svg>
+                    </button>
+                </div>
+            </div>
+            <button type="submit" class="primary-btn">Login</button>
+        </form>
+
+        <p class="bottom-text">
+            New to Supply Hub? <a href="register.html">Create an account</a>
+        </p>
+        <a class="form-home-link" href="index.html">← Back to home</a>
+        <p id="loginMessage" class="form-message" aria-live="polite"></p>
+    </div>
+
+    <script src="index.js"></script>
+</body>
+</html>
